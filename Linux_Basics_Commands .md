@@ -1,115 +1,126 @@
-# 🌱 Linux Basics -- My Learning Notes
+# 🌱 Linux Commands – Beginner Notes
 
-This file contains basic Linux commands that I am learning as part of my
-Linux journey. It includes the command, its description, and an example
-usage.
+This file contains basic Linux commands with simple explanations.
+It is designed for beginners and quick revision.
 
-------------------------------------------------------------------------
+---
 
-## 📂 File & Directory Commands
+## 📂 Basic File & Directory Commands
 
-  Command   Description                    Example
-  --------- ------------------------------ --------------------
-  pwd       Shows current directory path   pwd
-  ls        Lists files and directories    ls -l
-  cd        Change directory               cd /home/user
-  mkdir     Create a new directory         mkdir projects
-  rmdir     Remove empty directory         rmdir test
-  touch     Create empty file              touch file.txt
-  rm        Remove files or folders        rm file.txt
-  cp        Copy files                     cp a.txt b.txt
-  mv        Move or rename files           mv old.txt new.txt
+ls - List files and directories  
+cd - Change directory  
+pwd - Print working directory  
+mkdir - Create a new directory  
+rmdir - Remove an empty directory  
+rm - Remove files or directories  
+cp - Copy files or directories  
+mv - Move or rename files or directories  
+touch - Create an empty file  
 
-------------------------------------------------------------------------
+---
 
 ## 📄 File Viewing Commands
 
-  Command   Description              Example
-  --------- ------------------------ ---------------
-  cat       Display file content     cat file.txt
-  less      View file page by page   less file.txt
-  head      Show first lines         head file.txt
-  tail      Show last lines          tail file.txt
+cat - Display file content  
+less - View file content page by page  
+head - Display first lines of a file  
+tail - Display last lines of a file  
 
-------------------------------------------------------------------------
+---
 
-## 🔍 Search & Info Commands
+## 🔍 Search & Help Commands
 
-  Command   Description            Example
-  --------- ---------------------- ---------------------------
-  grep      Search text in files   grep "linux" file.txt
-  find      Find files             find /home -name file.txt
-  whoami    Show current user      whoami
-  history   Show command history   history
+grep - Search for text in files  
+find - Search for files and directories  
+locate - Find files by name  
+man - Display the manual of a command  
+history - Show previously used commands  
 
-------------------------------------------------------------------------
+---
 
-## ⚙️ System & Process Commands
+## 👤 User Management Commands
 
-  Command   Description              Example
-  --------- ------------------------ -----------
-  top       Show running processes   top
-  ps        Process status           ps aux
-  kill      Stop a process           kill 1234
-  df        Disk usage               df -h
-  free      Memory usage             free -m
+useradd - Create a new user  
+userdel - Delete a user  
+usermod - Modify a user account  
+passwd - Set or change user password  
+whoami - Display current logged-in user  
+id - Display user ID and group ID  
 
-------------------------------------------------------------------------
+---
 
-## 🔐 Permissions Commands
+## 👥 Group Management Commands
 
-  Command   Description          Example
-  --------- -------------------- ---------------------
-  chmod     Change permissions   chmod 755 file.sh
-  chown     Change owner         chown user file.txt
+groupadd - Create a new group  
+groupdel - Delete a group  
+groupmod - Modify a group  
+groups - Show groups of a user  
 
-------------------------------------------------------------------------
+---
 
-## 🛠️ Service Management Commands (Important)
+## 🔐 Permissions & Ownership Commands
 
-  ------------------------------------------------------------------------
-  Command           Description                     Example
-  ----------------- ------------------------------- ----------------------
-  systemctl status  Check service status            systemctl status
-                                                    apache2
+chmod - Change file permissions  
+chown - Change file owner  
+chgrp - Change group ownership  
+ls -l - View file permissions  
 
-  systemctl start   Start a service                 sudo systemctl start
-                                                    apache2
+---
 
-  systemctl stop    Stop a service                  sudo systemctl stop
-                                                    apache2
+## ⚙️ Process & System Commands
 
-  systemctl restart Restart a service               sudo systemctl restart
-                                                    apache2
+ps - Display running processes  
+top - Show system resource usage  
+kill - Terminate a process  
+df - Show disk space usage  
+du - Show directory size  
+free - Display memory usage  
 
-  systemctl enable  Start service on boot           sudo systemctl enable
-                                                    apache2
+---
 
-  systemctl disable Disable service on boot         sudo systemctl disable
-                                                    apache2
+## 🛠️ Service Management Commands (systemctl)
 
-  systemctl         List active services            systemctl list-units
-  list-units                                        --type=service
+systemctl status service_name - Check service status  
+systemctl start service_name - Start a service  
+systemctl stop service_name - Stop a service  
+systemctl restart service_name - Restart a service  
+systemctl enable service_name - Enable service at boot  
+systemctl disable service_name - Disable service at boot  
+systemctl list-units --type=service - List running services  
 
-  service           Manage services (older systems) sudo service apache2
-                                                    status
-  ------------------------------------------------------------------------
+---
 
-------------------------------------------------------------------------
+## 📦 Package Management Commands
 
-## 🚀 Package & Network Commands
+apt update - Update package list  
+apt upgrade - Upgrade installed packages  
+apt install package_name - Install a package  
+apt remove package_name - Remove a package  
 
-  Command       Description          Example
-  ------------- -------------------- ----------------------
-  apt update    Update packages      sudo apt update
-  apt install   Install package      sudo apt install git
-  ping          Check connectivity   ping google.com
-  ifconfig      Network info         ifconfig
-  ip a          Show IP address      ip a
+--
 
-------------------------------------------------------------------------
+## 🌐 Network Commands
 
-📌 *Still learning, still growing. This file will keep expanding as I
-explore more Linux!*
+ping - Check network connectivity  
+ifconfig - Display network interfaces  
+ip a - Show IP address  
+netstat - Display network connections  
+ssh - Connect to a remote system  
+scp - Copy files between systems securely  
 
-#LinuxBasics #LearningEveryDay #TechJourney
+---
+
+## 📦 Archive & Compression Commands
+
+tar - Archive files and directories  
+gzip - Compress files  
+gunzip - Decompress files  
+
+
+
+📌 Still learning, still growing.
+This repository will be updated as I continue my Linux journey.
+
+#Linux #LinuxBasics #LearningLinux #GitHub #TechJourney
+
+
