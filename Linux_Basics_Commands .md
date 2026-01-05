@@ -1,126 +1,224 @@
-# 🌱 Linux Commands – Beginner Notes
+🌱 Linux Commands – Beginner Notes
 
 This file contains basic Linux commands with simple explanations.
 It is designed for beginners and quick revision.
 
----
+📂 Basic File & Directory Commands
 
-## 📂 Basic File & Directory Commands
+ls - List files and directories
+Example: ls
 
-ls - List files and directories  
-cd - Change directory  
-pwd - Print working directory  
-mkdir - Create a new directory  
-rmdir - Remove an empty directory  
-rm - Remove files or directories  
-cp - Copy files or directories  
-mv - Move or rename files or directories  
-touch - Create an empty file  
+cd - Change directory
+Example: cd Documents
 
----
+pwd - Print working directory
+Example: pwd
 
-## 📄 File Viewing Commands
+mkdir - Create a new directory
+Example: mkdir myfolder
 
-cat - Display file content  
-less - View file content page by page  
-head - Display first lines of a file  
-tail - Display last lines of a file  
+rmdir - Remove an empty directory
+Example: rmdir myfolder
 
----
+rm - Remove files or directories
+Example: rm file.txt
 
-## 🔍 Search & Help Commands
+cp - Copy files or directories
+Example: cp file1.txt file2.txt
 
-grep - Search for text in files  
-find - Search for files and directories  
-locate - Find files by name  
-man - Display the manual of a command  
-history - Show previously used commands  
+mv - Move or rename files or directories
+Example: mv old.txt new.txt
 
----
+touch - Create an empty file
+Example: touch test.txt
 
-## 👤 User Management Commands
+📄 File Viewing Commands
 
-useradd - Create a new user  
-userdel - Delete a user  
-usermod - Modify a user account  
-passwd - Set or change user password  
-whoami - Display current logged-in user  
-id - Display user ID and group ID  
+cat - Display file content
+Example: cat file.txt
 
----
+less - View file content page by page
+Example: less file.txt
 
-## 👥 Group Management Commands
+head - Display first lines of a file
+Example: head file.txt
 
-groupadd - Create a new group  
-groupdel - Delete a group  
-groupmod - Modify a group  
-groups - Show groups of a user  
+tail - Display last lines of a file
+Example: tail file.txt
 
----
+🔍 Search & Help Commands
 
-## 🔐 Permissions & Ownership Commands
+grep - Search for text in files
+Example: grep "linux" file.txt
 
-chmod - Change file permissions  
-chown - Change file owner  
-chgrp - Change group ownership  
-ls -l - View file permissions  
+find - Search for files and directories
+Example: find /home -name file.txt
 
----
+locate - Find files by name
+Example: locate file.txt
 
-## ⚙️ Process & System Commands
+man - Display the manual of a command
+Example: man ls
 
-ps - Display running processes  
-top - Show system resource usage  
-kill - Terminate a process  
-df - Show disk space usage  
-du - Show directory size  
-free - Display memory usage  
+history - Show previously used commands
+Example: history
 
----
+👤 User Management Commands
 
-## 🛠️ Service Management Commands (systemctl)
+useradd - Create a new user
+Example: sudo useradd user1
 
-systemctl status service_name - Check service status  
-systemctl start service_name - Start a service  
-systemctl stop service_name - Stop a service  
-systemctl restart service_name - Restart a service  
-systemctl enable service_name - Enable service at boot  
-systemctl disable service_name - Disable service at boot  
-systemctl list-units --type=service - List running services  
+userdel - Delete a user
+Example: sudo userdel user1
 
----
+usermod - Modify a user account
+Example: sudo usermod -aG sudo user1
 
-## 📦 Package Management Commands
+passwd - Set or change user password
+Example: passwd user1
 
-apt update - Update package list  
-apt upgrade - Upgrade installed packages  
-apt install package_name - Install a package  
-apt remove package_name - Remove a package  
+whoami - Display current logged-in user
+Example: whoami
 
---
+id - Display user ID and group ID
+Example: id user1
 
-## 🌐 Network Commands
+👥 Group Management Commands
 
-ping - Check network connectivity  
-ifconfig - Display network interfaces  
-ip a - Show IP address  
-netstat - Display network connections  
-ssh - Connect to a remote system  
-scp - Copy files between systems securely  
+groupadd - Create a new group
+Example: sudo groupadd developers
 
----
+groups - Show groups of a user
+Example: groups user1
 
-## 📦 Archive & Compression Commands
+🔐 Permissions & Ownership Commands
 
-tar - Archive files and directories  
-gzip - Compress files  
-gunzip - Decompress files  
+chmod - Change file permissions
+Example: chmod 755 script.sh
 
+chown - Change file owner
+Example: sudo chown user1 file.txt
 
+chgrp - Change group ownership
+Example: sudo chgrp developers file.txt
+
+ls -l - View file permissions
+Example: ls -l
+
+⚙️ Process & System Commands
+
+ps - Display running processes
+Example: ps
+
+top - Show system resource usage
+Example: top
+
+kill - Terminate a process
+Example: kill 1234
+
+df - Show disk space usage
+Example: df -h
+
+du - Show directory size
+Example: du -sh myfolder
+
+free - Display memory usage
+Example: free -h
+
+🛠️ Service Management Commands (systemctl)
+
+systemctl status service_name - Check service status
+Example: systemctl status apache2
+
+systemctl start service_name - Start a service
+Example: sudo systemctl start apache2
+
+systemctl stop service_name - Stop a service
+Example: sudo systemctl stop apache2
+
+systemctl restart service_name - Restart a service
+Example: sudo systemctl restart apache2
+
+systemctl enable service_name - Enable service at boot
+Example: sudo systemctl enable apache2
+
+systemctl disable service_name - Disable service at boot
+Example: sudo systemctl disable apache2
+
+systemctl list-units --type=service - List running services
+Example: systemctl list-units --type=service
+
+📦 Package Management Commands
+
+apt update - Update package list
+Example: sudo apt update
+
+apt upgrade - Upgrade installed packages
+Example: sudo apt upgrade
+
+apt install package_name - Install a package
+Example: sudo apt install git
+
+apt remove package_name - Remove a package
+Example: sudo apt remove git
+
+yum install package_name - Install package (RPM systems)
+Example: sudo yum install git
+
+🌐 Network Commands
+
+ping - Check network connectivity
+Example: ping google.com
+
+ifconfig - Display network interfaces
+Example: ifconfig
+
+ip a - Show IP address
+Example: ip a
+
+netstat - Display network connections
+Example: netstat -tuln
+
+ssh - Connect to a remote system
+Example: ssh user@192.168.1.10
+
+scp - Copy files between systems securely
+Example: scp file.txt user@192.168.1.10:/home/user
+
+📦 Archive & Compression Commands
+
+tar - Archive files and directories
+Example: tar -cvf backup.tar myfolder
+
+gzip - Compress files
+Example: gzip file.txt
+
+gunzip - Decompress files
+Example: gunzip file.txt.gz
+
+🧾 Text Processing Commands
+
+cut - Extract columns from files
+Example: cut -d ":" -f1 file.txt
+
+wc - Count lines, words, characters
+Example: wc file.txt
+
+diff - Compare two files
+Example: diff file1.txt file2.txt
+
+🔗 Miscellaneous Commands
+
+echo - Display text or variables
+Example: echo "Hello Linux"
+
+date - Display system date and time
+Example: date
+
+clear - Clear the terminal screen
+Example: clear
 
 📌 Still learning, still growing.
 This repository will be updated as I continue my Linux journey.
 
 #Linux #LinuxBasics #LearningLinux #GitHub #TechJourney
-
-
