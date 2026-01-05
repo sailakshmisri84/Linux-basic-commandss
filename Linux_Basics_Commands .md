@@ -145,9 +145,6 @@ Example: sudo systemctl enable apache2
 systemctl disable service_name - Disable service at boot
 Example: sudo systemctl disable apache2
 
-systemctl list-units --type=service - List running services
-Example: systemctl list-units --type=service
-
 📦 Package Management Commands
 
 apt update - Update package list
